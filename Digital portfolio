@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        #about {
+            background-color: #f4f4f4;
+        }
+
+        #projects {
+            background-color: #eaeaea;
+        }
+
+        .project-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .project-item {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 30%;
+        }
+
+        #skills {
+            background-color: #f4f4f4;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        #contact {
+            background-color: #eaeaea;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        a {
+            color: #0066cc;
+        }
+
+        a:hover {
+            color: #004d99;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about" class="section">
+        <h1>About Me</h1>
+        <p>Hi, I'm Dinesh! I'm a passionate web developer with a strong foundation in HTML, CSS, JavaScript, and SQL. I love building responsive websites and learning new technologies.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h1>Projects</h1>
+        <div class="project-list">
+            <div class="project-item">
+                <h2>Weather App</h2>
+                <p>A JavaScript-based weather app that provides real-time weather reports of any city.</p>
+            </div>
+            <div class="project-item">
+                <h2>Retail Sales Analysis</h2>
+                <p>An SQL project that analyzes retail sales data to identify trends and improve decision-making.</p>
+            </div>
+            <div class="project-item">
+                <h2>Login Page</h2>
+                <p>A responsive login interface designed using HTML and CSS.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h1>Skills</h1>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>SQL</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h1>Contact</h1>
+        <p>Feel free to reach out to me via email at <a href="mailto:dinesh@example.com">dinesh@example.com</a>.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dinesh's Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
