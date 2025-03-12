@@ -3,165 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Digital Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Dinesh's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
         }
-
-        .navbar {
-            background-color: #333;
-            padding: 10px;
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
             text-align: center;
         }
-
-        .navbar ul {
-            list-style-type: none;
+        nav ul {
+            list-style: none;
             padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
         }
-
-        .navbar li {
+        nav ul li {
+            display: inline;
             margin: 0 15px;
         }
-
-        .navbar a {
+        nav ul li a {
             color: white;
             text-decoration: none;
             font-size: 18px;
         }
-
-        .navbar a:hover {
-            text-decoration: underline;
-        }
-
-        .section {
-            padding: 50px;
+        section {
+            padding: 40px;
             text-align: center;
+            background: white;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: background 0.3s, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            opacity: 0;
+            transform: translateY(20px);
         }
-
-        #about {
-            background-color: #f4f4f4;
+        .dark-mode section {
+            background: #222;
         }
-
-        #projects {
-            background-color: #eaeaea;
+        h2 {
+            color: #333;
+            transition: color 0.3s;
         }
-
-        .project-list {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+        .dark-mode h2 {
+            color: #ddd;
         }
-
-        .project-item {
-            background-color: white;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 30%;
-        }
-
-        #skills {
-            background-color: #f4f4f4;
-        }
-
         ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
         }
-
-        li {
-            margin: 10px 0;
+        ul li {
+            background: #eee;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
-
-        #contact {
-            background-color: #eaeaea;
+        .dark-mode ul li {
+            background: #444;
         }
-
         footer {
-            background-color: #333;
-            color: white;
             text-align: center;
-            padding: 10px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            padding: 20px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
         }
-
         a {
-            color: #0066cc;
+            color: #007BFF;
+            text-decoration: none;
         }
-
         a:hover {
-            color: #004d99;
+            text-decoration: underline;
+        }
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- About Me Section -->
-    <section id="about" class="section">
-        <h1>About Me</h1>
-        <p>Hi, I'm Dinesh! I'm a passionate web developer with a strong foundation in HTML, CSS, JavaScript, and SQL. I love building responsive websites and learning new technologies.</p>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <header>
+        <h1>Dinesh's Digital Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am Dinesh, a Electronics And Communication Engineering student at Panimalar Institute of Technology. Passionate about web development, automation testing, and software solutions.</p>
     </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h1>Projects</h1>
-        <div class="project-list">
-            <div class="project-item">
-                <h2>Weather App</h2>
-                <p>A JavaScript-based weather app that provides real-time weather reports of any city.</p>
-            </div>
-            <div class="project-item">
-                <h2>Retail Sales Analysis</h2>
-                <p>An SQL project that analyzes retail sales data to identify trends and improve decision-making.</p>
-            </div>
-            <div class="project-item">
-                <h2>Login Page</h2>
-                <p>A responsive login interface designed using HTML and CSS.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <h1>Skills</h1>
+    
+    <section id="projects">
+        <h2>Projects</h2>
         <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>SQL</li>
+            <li><strong>Weather App:</strong> A JavaScript-based application that fetches real-time weather data.</li>
+            <li><strong>Retail Sales Analysis:</strong> SQL-based analysis to derive business insights.</li>
+            <li><strong>Login Page:</strong> A responsive login page using HTML & CSS.</li>
         </ul>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h1>Contact</h1>
-        <p>Feel free to reach out to me via email at <a href="mailto:dinesh@example.com">dinesh@example.com</a>.</p>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>SQL, Python</li>
+            <li>Java (OOP, Data Structures, Collections)</li>
+            <li>Selenium (Automation Testing)</li>
+        </ul>
     </section>
-
-    <!-- Footer -->
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: mdinesh0725@gmail.com</p>
+        <p>GitHub: <a href="https://github.com/dinesh" target="_blank">github.com/dinesh</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/dinesh" target="_blank">linkedin.com/in/dinesh</a></p>
+    </section>
+    
     <footer>
-        <p>&copy; 2025 Dinesh's Portfolio. All rights reserved.</p>
+        <p>&copy; 2025 Dinesh. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            let sections = document.querySelectorAll("section");
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.style.opacity = "1";
+                    section.style.transform = "translateY(0)";
+                }, index * 300);
+            });
+        });
+    </script>
 </body>
 </html>
